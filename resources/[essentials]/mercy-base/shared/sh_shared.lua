@@ -29,7 +29,7 @@ Shared.InventoryMaxWeight = 250.0
 
 Shared.Tax = {
     ['Property'] = 15, -- +15% of the price
-    ['Vehicle'] = 49, -- +49% of the price
+    ['Vehicle'] = 25, -- +49% of the price
     ['Goods'] = 15, -- +15% of the price
     ['Clothes'] = 15, -- +15% of the prices,
 }
