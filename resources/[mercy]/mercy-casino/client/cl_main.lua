@@ -191,6 +191,7 @@ function HasCasinoMembership()
     local CardData = CallbackModule.SendCallback('mercy-base/server/get-membership')
     if not CardData then return false end
     return true
+end
 
 function EnterCasino(Bool)
     if Bool == InCasino then return end
