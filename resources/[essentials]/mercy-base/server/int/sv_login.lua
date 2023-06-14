@@ -12,10 +12,10 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 	deferrals.defer()
 	local src = source
     FunctionsModule = exports[GetCurrentResourceName()]:FetchModule('Functions')
-	Wait(1500)
+	Wait(500)
     -- Name
 	deferrals.update("📝 Checking Name..")
-	Wait(1500)
+	Wait(500)
 	local PlayerName = GetPlayerName(src)
 	if PlayerName == nil then 
 		FunctionsModule.Kick(src, '❌ Don\'t use an empty Steam name.', setKickReason, deferrals)
@@ -28,7 +28,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
         return false
 	end
 	if (string.match(PlayerName, "drop") or string.match(PlayerName, "table") or string.match(PlayerName, "database")) then
-        FunctionsModule.Kick(src, '❌ You have a word in your name (drop/table/database) which is not allowed.\nPlease remove this from your steam name.', setKickReason, deferrals)
+        FunctionsModule.Kick(src, '❌ You have a word in your name which is not allowed.\nPlease remove this from your steam name.', setKickReason, deferrals)
         CancelEvent()
         return false
 	end
@@ -43,9 +43,9 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 	-- 	return false
 	-- end
     -- Steam
-	Wait(1500)
+	Wait(500)
 	deferrals.update("💻 Checking Steam..")
-	Wait(1500)
+	Wait(500)
     local Steam = FunctionsModule.GetIdentifier(src, "steam")
 	if Steam == nil then 
 		FunctionsModule.Kick(src, '❌ Error while contacting steam services, please try again.', setKickReason, deferrals)
@@ -53,24 +53,24 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 		return false
 	end
     if ((Steam:sub(1,6) == "steam:") == false) then
-        FunctionsModule.Kick(src, '❌ You must have Steam on to play.', setKickReason, deferrals)
+        FunctionsModule.Kick(src, '❌ Ensure steam is launched and reconnect.', setKickReason, deferrals)
         CancelEvent()
 		return false
 	end
-	Wait(1500)
-	deferrals.update("🔒 Checking if you are banned..")
-	Wait(1500)
+	Wait(500)
+	deferrals.update("🔒 Verifying ban status..")
+	Wait(500)
 	local IsBanned, Message = FunctionsModule.IsPlayerBanned(src)
     if IsBanned then
 		deferrals.update(Message)
         CancelEvent()
         return false
     end
-	Wait(1500)
-	deferrals.update("\n\nWelcome to the Mercy Framework! Please have a moment, we're loading everything in!")
+	Wait(500)
+	deferrals.update("\n\nWelcome to the RPFrogs! Loading final assets...")
 	-- TODO: Queue
-    Wait(4000)
-	deferrals.update("Everything has succesfully loaded! We are searching a spot for you..")
+    Wait(3000)
+	deferrals.update("Everything loaded successfully! Joining the world now...")
     Citizen.Wait(2500)
     deferrals.done()
 	-- Wait(2500)
