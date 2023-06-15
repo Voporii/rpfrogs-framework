@@ -113,7 +113,7 @@ Config.Options = {
             { ['Id'] = 4,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
             { ['Id'] = 5,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 6,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", }, 
-            { ['Id'] = 7,  ['Type'] = 'Money', ['Amount'] = "1000", ['Colour'] = "#FFFF00", },
+            { ['Id'] = 7,  ['Type'] = 'Money', ['Amount'] = "500", ['Colour'] = "#FFFF00", },
             { ['Id'] = 8,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
             { ['Id'] = 9,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 10, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
@@ -127,7 +127,7 @@ Config.Options = {
             { ['Id'] = 18, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
             { ['Id'] = 19, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 20, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 21, ['Type'] = 'Money', ['Amount'] = "10000",  ['Colour'] = "#A020F0", },
+            { ['Id'] = 21, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 22, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
             { ['Id'] = 23, ['Type'] = 'Vehicle', ['Model'] = 'sultanrs', ['Colour'] = "#FF0000", },
         }
