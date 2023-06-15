@@ -109,7 +109,7 @@ Config.Options = {
             { ['Id'] = 0,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
             { ['Id'] = 1,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 2,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 3,  ['Type'] = 'Money', ['Amount'] = "1000", ['Colour'] = "#FFFF00", },
+            { ['Id'] = 3,  ['Type'] = 'Money', ['Amount'] = "2000", ['Colour'] = "#33FF5E", },
             { ['Id'] = 4,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
             { ['Id'] = 5,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 6,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", }, 
