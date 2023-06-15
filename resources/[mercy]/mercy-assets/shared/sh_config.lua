@@ -21,7 +21,7 @@ Config.Effects = {
 
 Config.DiscordSettings = {
     ['AppId'] = 1234,
-    ['Text'] = 'Mercy Collective',
+    ['Text'] = 'Server',
 }
 
 Config.BlacklistedScenarios = {
