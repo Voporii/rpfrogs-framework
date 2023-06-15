@@ -28,35 +28,35 @@ RegisterNetEvent('mc-wheel/client/do-spin', function(Data)
             if Slot == 23 then
                 local RandomChance = math.random(1, 10000)
                 if RandomChance == 1 then
-                    Slot = 23
+                    Slot = 23 -- Car Win
                 else 
                     Slot = 22
                 end
             elseif Slot == 19 then
                 local RandomChance = math.random(1, 500)
                 if RandomChance == 1 then
-                    Slot = 19
+                    Slot = 11  -- $10,000
+                else 
+                    Slot = 10
+                end
+            elseif Slot == 7 then
+                local RandomChance = math.random(1, 400)
+                if RandomChance == 1 then
+                    Slot = 17 -- $5,000
                 else 
                     Slot = 18
                 end
-            elseif Slot == 7 then
-                local RandomChance = math.random(1, 500)
-                if RandomChance == 1 then
-                    Slot = 7
-                else 
-                    Slot = 6
-                end
             elseif Slot == 15 then
-                local RandomChance = math.random(1, 500)
+                local RandomChance = math.random(1, 300)
                 if RandomChance == 1 then
-                    Slot = 15
+                    Slot = 15 -- $2,000
                 else 
                     Slot = 14
                 end
             elseif Slot == 3 then
-                local RandomChance = math.random(1, 500)
+                local RandomChance = math.random(1, 300)
                 if RandomChance == 1 then
-                    Slot = 3
+                    Slot = 3 -- $2,000
                 else 
                     Slot = 2
                 end
