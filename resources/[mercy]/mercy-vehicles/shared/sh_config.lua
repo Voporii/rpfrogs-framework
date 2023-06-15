@@ -234,17 +234,17 @@ Config.GasStations = {
     },
 
     -- -- MRPD, Helicopter
-    -- {
-    --     center = vector3(481.83, -982.1, 41.01),
-    --     length = 11.0,
-    --     width = 10.8,
-    --     heading = 91,
-    --     minZ = 40.01,
-    --     maxZ = 46.41,
-    --     data = {
-    --         vehicleClass = 15
-    --     }
-    -- },
+     {
+         center = vector3(481.83, -982.1, 41.01),
+         length = 11.0,
+         width = 10.8,
+         heading = 91,
+         minZ = 40.01,
+         maxZ = 46.41,
+         data = {
+            vehicleClass = 15
+         }
+     },
 
     -- Grapeseed, Airplane
     {

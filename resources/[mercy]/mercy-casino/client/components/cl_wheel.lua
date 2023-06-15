@@ -33,7 +33,7 @@ RegisterNetEvent('mc-wheel/client/do-spin', function(Data)
                     Slot = 22
                 end
             elseif Slot == 19 then
-                local RandomChance = math.random(1, 500)
+                local RandomChance = math.random(1, 800)
                 if RandomChance == 1 then
                     Slot = 11  -- $10,000
                 else 
