@@ -79,7 +79,7 @@ RegisterNetEvent("mercy-base/server/load-user", function()
 				SteamIdentifier, 
 				GetPlayerEndpoint(src), 
 				"user",
-				"rpfrog-"..math.random(1111, 9999),
+				"RPF-"..math.random(1111, 9999),
 			})
         else
             DatabaseModule.Update("UPDATE server_users SET name = ?, ip = ? WHERE steam = ? ", {GetPlayerName(src), GetPlayerEndpoint(src), SteamIdentifier})
