@@ -14,7 +14,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
     FunctionsModule = exports[GetCurrentResourceName()]:FetchModule('Functions')
 	Wait(500)
     -- Name
-	deferrals.update("📝 Checking Name..")
+	deferrals.update("📝 Verifying Name..")
 	Wait(500)
 	local PlayerName = GetPlayerName(src)
 	if PlayerName == nil then 
@@ -32,19 +32,9 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
         CancelEvent()
         return false
 	end
-    -- Discord
-	-- Wait(1500)
-	-- deferrals.update("💻 Checking Discord..")
-	-- Wait(1500)
-    -- local Discord = FunctionsModule.GetIdentifier(src, "discord")
-    -- if ((Discord:sub(1,8) == "discord:") == false) then
-    --     FunctionsModule.Kick(src, '❌ You must have Discord on to play.', setKickReason, deferrals)
-    --     CancelEvent()
-	-- 	return false
-	-- end
     -- Steam
 	Wait(500)
-	deferrals.update("💻 Checking Steam..")
+	deferrals.update("💻 Verifying Steam..")
 	Wait(500)
     local Steam = FunctionsModule.GetIdentifier(src, "steam")
 	if Steam == nil then 
@@ -58,7 +48,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 		return false
 	end
 	Wait(500)
-	deferrals.update("🔒 Verifying ban status..")
+	deferrals.update("🔒 Verifying Ban Status..")
 	Wait(500)
 	local IsBanned, Message = FunctionsModule.IsPlayerBanned(src)
     if IsBanned then
@@ -67,7 +57,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
         return false
     end
 	Wait(500)
-	deferrals.update("\n\nWelcome to the RPFrogs! Loading final assets...")
+	deferrals.update("\n\nWelcome to RPFrogs! Loading final assets...")
 	-- TODO: Queue
     Wait(3000)
 	deferrals.update("Everything loaded successfully! Joining the world now...")
@@ -89,7 +79,7 @@ RegisterNetEvent("mercy-base/server/load-user", function()
 				SteamIdentifier, 
 				GetPlayerEndpoint(src), 
 				"user",
-				"MERCY-"..math.random(1111, 9999),
+				"rpfrog-"..math.random(1111, 9999),
 			})
         else
             DatabaseModule.Update("UPDATE server_users SET name = ?, ip = ? WHERE steam = ? ", {GetPlayerName(src), GetPlayerEndpoint(src), SteamIdentifier})
