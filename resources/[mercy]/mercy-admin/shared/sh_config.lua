@@ -345,7 +345,7 @@ Config.Models = {
     "ig_mike",
     "ig_rocketraccoon",
     "ig_cornwood",
-    "a_c_mericaeagle"
+    "a_c_mericaeagle",
     -- Custom Animals
     "a_c_shepherd_np",
     "A_C_Retriever_np",
