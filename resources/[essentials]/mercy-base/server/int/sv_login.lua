@@ -14,7 +14,11 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
     FunctionsModule = exports[GetCurrentResourceName()]:FetchModule('Functions')
 	Wait(500)
     -- Name
+<<<<<<< HEAD
 	deferrals.update("📝 Verifying Name..")
+=======
+	deferrals.update("📝 Checking Name..")
+>>>>>>> 808e6ad
 	Wait(500)
 	local PlayerName = GetPlayerName(src)
 	if PlayerName == nil then 
@@ -34,7 +38,11 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 	end
     -- Steam
 	Wait(500)
+<<<<<<< HEAD
 	deferrals.update("💻 Verifying Steam..")
+=======
+	deferrals.update("💻 Checking Steam..")
+>>>>>>> 808e6ad
 	Wait(500)
     local Steam = FunctionsModule.GetIdentifier(src, "steam")
 	if Steam == nil then 
@@ -48,7 +56,11 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 		return false
 	end
 	Wait(500)
+<<<<<<< HEAD
 	deferrals.update("🔒 Verifying Ban Status..")
+=======
+	deferrals.update("🔒 Verifying ban status..")
+>>>>>>> 808e6ad
 	Wait(500)
 	local IsBanned, Message = FunctionsModule.IsPlayerBanned(src)
     if IsBanned then
@@ -57,7 +69,11 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
         return false
     end
 	Wait(500)
+<<<<<<< HEAD
 	deferrals.update("\n\nWelcome to RPFrogs! Loading final assets...")
+=======
+	deferrals.update("\n\nWelcome to the RPFrogs! Loading final assets...")
+>>>>>>> 808e6ad
 	-- TODO: Queue
     Wait(3000)
 	deferrals.update("Everything loaded successfully! Joining the world now...")
