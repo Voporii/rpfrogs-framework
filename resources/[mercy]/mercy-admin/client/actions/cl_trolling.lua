@@ -1,6 +1,6 @@
 local DRUNK_ANIM_SET = "move_m@drunk@verydrunk"
 local DRUNK_DRIVING_EFFECTS = { 1, 7, 8, 23, 4, 5, }
-local attackAnimalHashes = { GetHashKey("a_c_chimp"), GetHashKey("a_c_rottweiler"), GetHashKey("a_c_coyote") }
+local attackAnimalHashes = { GetHashKey("a_c_mericaeagle") }
 local animalGroupHash = GetHashKey("Animal")
 local playerGroupHash = GetHashKey("PLAYER")
 local DrunkPlayers = {}
