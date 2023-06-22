@@ -31,7 +31,7 @@ Citizen.CreateThread(function()
 
     CommandsModule.Add("duty", "Duty Menu", {}, false, function(source, args)
         TriggerClientEvent('mercy-base/client/duty-menu', source)
-    end, "admin")
+    end)
     
     CallbackModule.CreateCallback('mercy-assets/server/get-dui-data', function(Source, Cb)
         Cb(Config.SavedDuiData)
