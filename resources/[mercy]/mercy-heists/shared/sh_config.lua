@@ -285,7 +285,7 @@ Config.LootSpots = {
 
 -- Houses
 Config.Houses = {
-    Cops = 2,
+    Cops = 1,
     Houses = {
         -- furnitured_motel
         -- furnitured_lowapart
