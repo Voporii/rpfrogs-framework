@@ -150,7 +150,7 @@ RegisterNetEvent("mc-clothing/server/save-skin", function(Data)
         DatabaseModule.Execute('SELECT * FROM player_skins WHERE citizenid = ?', {Player.PlayerData.CitizenId}, function(SkinResult)
             if SkinResult[1] ~= nil then
                 DatabaseModule.Update('UPDATE player_skins SET model = ?, skin = ?, tatoos = ? WHERE citizenid = ?', {
-                    Data['Skin']['Model'].Item ~= nil and Data['Skin']['Model'].Item == "" and "mp_m_freemode_01" or Data['Skin']['Model'].Item,
+                    Data['Skin']['Model'].Item ~= nil and Data['Skin']['Model'].Item == "" or Data['Skin']['Model'].Item,
                     json.encode(Data['Skin']),
                     json.encode(Data['Tattoos']),
                     Player.PlayerData.CitizenId,
