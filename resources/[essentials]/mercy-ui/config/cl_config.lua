@@ -191,7 +191,7 @@ Config.EyeEntries = {
                 Enabled = function(Entity)
                     if exports['mercy-phone']:IsJobCenterTaskActive('sanitation', 4) == false and exports['mercy-phone']:IsJobCenterTaskActive('sanitation', 6) == false then return end
 
-                    if GetEntityModel(Entity) == GetHashKey("trash") and GetBoneDistanceFromVehicle(2, "boot") < 5.0 and GetVehicleDoorAngleRatio(Entity, 5) > 0.0 then
+                    if GetEntityModel(Entity) == GetHashKey("trash") and GetBoneDistanceFromVehicle(2, "boot") < 5.0 then
                         return true
                     else
                         return false
