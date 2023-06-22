@@ -19,37 +19,37 @@ Config.BobcatSecurity = {
     },
 }
 
+
 Config.HeistRewards = {
     ['Housing'] = {
         ['Kitchen'] = {
             ['Min'] = 1, -- Minimum amount of items
             ['Max'] = 3, -- Maximum amount of items
             ['Items'] = {
-                'water',
-                'phone'
+                'cash-rolls'
             }
         },
         ['House'] = {
-            ['Min'] = 1, -- Minimum amount of items
-            ['Max'] = 3, -- Maximum amount of items
+            ['Min'] = 0, -- Minimum amount of items
+            ['Max'] = 2, -- Maximum amount of items
             ['Items'] = {
-                'water',
-                'phone'
+                'oxy',
+                'cash-rolls'
             }
         },
         ['Bed'] = {
             ['Min'] = 1, -- Minimum amount of items
-            ['Max'] = 3, -- Maximum amount of items
+            ['Max'] = 2, -- Maximum amount of items
             ['Items'] = {
                 'water',
-                'phone'
+                'electronics'
             }
         },
         ['Shower'] = {
-            ['Min'] = 1, -- Minimum amount of items
-            ['Max'] = 3, -- Maximum amount of items
+            ['Min'] = 0, -- Minimum amount of items
+            ['Max'] = 1, -- Maximum amount of items
             ['Items'] = {
-                'water',
+                'lockpick',
                 'phone'
             }
         },
@@ -58,8 +58,7 @@ Config.HeistRewards = {
         ['Min'] = 14, -- Minimum amount of items
         ['Max'] = 35, -- Maximum amount of items
         ['Items'] = {
-            'water',
-            'phone'
+            'cash-bands'
         }
     }
 }
