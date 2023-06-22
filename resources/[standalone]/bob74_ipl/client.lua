@@ -83,8 +83,6 @@ Citizen.CreateThread(function()
 	-- Zancudo Gates (GTAO like): -1600.30100000, 2806.73100000, 18.79683000
 		RequestIpl("CS3_07_MPGates")
 		
-	-- Pillbox hospital:
-		RequestIpl("rc12b_default")
 
 	-- Josh's house: -1117.1632080078, 303.090698, 66.52217
 		RequestIpl("bh1_47_joshhse_unburnt")
