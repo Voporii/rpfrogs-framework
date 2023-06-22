@@ -2,7 +2,7 @@ Config = Config or {}
 
 -- Bankrob
 
-Config.StoreCops, Config.BankCops, Config.JewelleryCops, Config.BanktruckCops, Config.BobcatCops = 0, 0, 0, 0, 0 -- 2, 3, 3, 3, 4
+Config.StoreCops, Config.BankCops, Config.JewelleryCops, Config.BanktruckCops, Config.BobcatCops = 1, 2, 2, 3, 4 -- 2, 3, 3, 3, 4
 
 Config.GemTypes = {'Jade', 'Ruby', 'Onyx', 'Diamond', 'Sapphire', 'Aquamarine'}
 
