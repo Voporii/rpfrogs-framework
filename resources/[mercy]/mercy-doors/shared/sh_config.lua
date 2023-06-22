@@ -3028,7 +3028,7 @@ Config.Doors = {
         Access = {
             Job = { 'police', 'judge' },
             CitizenId = {},
-            Business = { 'Onderwereld Dokter' },
+            Business = { 'Puppet Master' },
         }
     },
     
