@@ -88,7 +88,11 @@ function Phone.DoAnim(Hold, Call, Cancel)
                 end
                 Citizen.Wait(3000)
             end
-    
+            if IsEntityPlayingAnim(PlayerPedId(), "cellphone@", "cellphone_text_to_call", 3) then
+                StopAnimTask(PlayerPedId(), "cellphone@", "cellphone_text_to_call", 1.0)
+            else
+                StopAnimTask(PlayerPedId(), "cellphone@", "cellphone_text_read_base", 1.0)
+            end
             exports['mercy-assets']:RemoveProps("Phone")
         end)
     end
