@@ -84,7 +84,7 @@ Citizen.CreateThread(function()
                         TriggerClientEvent('mercy-phone/client/notification', MemberData['Source'], {
                             Id = math.random(11111111, 99999999),
                             Title = "Job Center",
-                            Message = "You have earned $"..Money.." for completing the job",
+                            Message = "$"..Money.." has been added to your paycheck!",
                             Icon = "fas fa-briefcase",
                             IconBgColor = "#4f5efc",
                             IconColor = "white",
