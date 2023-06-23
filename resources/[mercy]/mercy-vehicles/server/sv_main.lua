@@ -334,6 +334,15 @@ RegisterNetEvent("mercy-vehicles/server/send-message-to-impound", function()
     end
 end)
 
+RegisterNetEvent("mercy-vehicles/server/pd-message-to-impound", function()
+    for k, v in pairs(PlayerModule.GetPlayers()) do
+        local Player = PlayerModule.GetPlayerBySource(v)
+        if exports['mercy-business']:IsPlayerInBusiness(Player, 'Los Santos Depot') then
+            TriggerClientEvent('mercy-chat/client/post-message', Player.PlayerData.Source, "PD requires your assitance with an impound!", "urgent")
+        end
+    end
+end)
+
 RegisterNetEvent("mercy-vehicles/server/park-vehicle", function(VehNet, CurrentGarage)
     local Vehicle = NetworkGetEntityFromNetworkId(VehNet)
     local Plate = GetVehicleNumberPlateText(Vehicle)

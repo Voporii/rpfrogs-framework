@@ -105,9 +105,9 @@ RegisterNetEvent("mercy-vehicles/client/check-request-impound", function(Data)
                 end)
             end
         end)
-    -- elseif Data.ImpoundId == #Config.ImpoundList then -- call for impound worker
-    --     TriggerServerEvent("mercy-jobs/server/impound/add-impound-request", NetworkGetNetworkIdFromEntity(Data.Vehicle))
-    --     exports['mercy-ui']:Notify('sent-depot', "Successfully sent notification to depot employees..", "success")
+    elseif Data.ImpoundId == #Config.ImpoundList then -- call for impound worker
+         TriggerServerEvent("mercy-vehicles/server/pd-message-to-impound", NetworkGetNetworkIdFromEntity(Data.Vehicle))
+         exports['mercy-ui']:Notify('sent-depot', "Successfully sent notification to depot employees..", "success")
     else
         exports['mercy-ui']:ProgressBar('Sending vehicle to depot..', math.random(5000, 10000), {['AnimName'] = 'struggle_loop_b_thief', ['AnimDict'] = 'random@mugging4', ['AnimFlag'] = 49}, false, false, false, function(DidComplete)
             if DidComplete then

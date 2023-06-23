@@ -861,13 +861,13 @@ Config.ImpoundList = {
         Reason = '',
         Gov = true,
     },
-    -- {
-    --     Title = 'Depot Employee Request',
-    --     Desc = 'Send notification to an Depot Employee.',
-    --     Hours = 0, Fee = 0, Strikes = 0,
-    --     Reason = '',
-    --     Gov = true,
-    -- },
+    {
+        Title = 'Depot Employee Request',
+        Desc = 'Send notification to an Depot Employee.',
+        Hours = 0, Fee = 0, Strikes = 0,
+        Reason = '',
+        Gov = true,
+     },
 }
 
 -- Trunk
