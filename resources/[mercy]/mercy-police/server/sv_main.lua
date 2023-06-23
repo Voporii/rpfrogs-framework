@@ -172,28 +172,28 @@ CreateThread(function()
         TriggerClientEvent('mercy-police/client/send-911', source, CallData, true)
     end)
 
-    -- CommandsModule.Add("911r", "Reply on a 911 call", {{Name="Id", Help="Id"}, {Name="Message", Help="Message"}}, false, function(source, args)
-    --     local Player = PlayerModule.GetPlayerBySource(source)
-    --     local Target = args[1]             
-    --     args[1] = "" 
-    --     local CallData = {}
-    --     CallData['Id'] = source
-    --     CallData['Who'] = Player.PlayerData.CharInfo.Firstname..' '..Player.PlayerData.CharInfo.Lastname
-    --     CallData['Message'] = table.concat(args, ' ')
-    --     TriggerClientEvent('mercy-police/client/send-reaction-to-dispatch', -1, CallData)
-    -- end)
+     CommandsModule.Add("911r", "Reply on a 911 call", {{Name="Id", Help="Id"}, {Name="Message", Help="Message"}}, false, function(source, args)
+         local Player = PlayerModule.GetPlayerBySource(source)
+         local Target = args[1]             
+         args[1] = "" 
+         local CallData = {}
+         CallData['Id'] = source
+         CallData['Who'] = Player.PlayerData.CharInfo.Firstname..' '..Player.PlayerData.CharInfo.Lastname
+         CallData['Message'] = table.concat(args, ' ')
+         TriggerClientEvent('mercy-police/client/send-reaction-to-dispatch', -1, CallData)
+     end)
 
-    -- CommandsModule.Add("911ra", "Reply Anonymously on a 911 call", {{Name="Id", Help="Id"}, {Name="Message", Help="Message"}}, false, function(source, args)
-    --     local Player = PlayerModule.GetPlayerBySource(source)
-    --     local Target = args[1]             
-    --     args[1] = "" 
-    --     if Player.PlayerData.Job.Name == 'police' or Player.PlayerData.Job.Name == 'ems' and Player.PlayerData.Job.Duty then
-    --         local CallData = {}
-    --         CallData['Id'] = source
-    --         CallData['Message'] = table.concat(args, ' ')
-    --         TriggerClientEvent('mercy-police/client/send-911-dispatch', Target, CallData, true)
-    --     end
-    -- end)
+     CommandsModule.Add("911ra", "Reply Anonymously on a 911 call", {{Name="Id", Help="Id"}, {Name="Message", Help="Message"}}, false, function(source, args)
+         local Player = PlayerModule.GetPlayerBySource(source)
+         local Target = args[1]             
+         args[1] = "" 
+         if Player.PlayerData.Job.Name == 'police' or Player.PlayerData.Job.Name == 'ems' and Player.PlayerData.Job.Duty then
+             local CallData = {}
+             CallData['Id'] = source
+             CallData['Message'] = table.concat(args, ' ')
+             TriggerClientEvent('mercy-police/client/send-911-dispatch', Target, CallData, true)
+         end
+     end)
 
     CommandsModule.Add("callsign", "View callsign", {}, false, function(source, args)
         local Player = PlayerModule.GetPlayerBySource(source)
