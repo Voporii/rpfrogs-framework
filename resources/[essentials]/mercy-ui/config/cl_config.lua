@@ -479,6 +479,14 @@ Config.Locations = {
         Hidden = false,
     },
     {
+        Id = "viceroy",
+        Name = 'Viceroy Medical',
+        Icon = 'fas fa-map-marker-alt',
+        Coords = { X = -860.89, Y = -1224.71, Z = 6.19 },
+        Type = 'Location',
+        Hidden = false,
+    },
+    {
         Id = "motelparking",
         Name = 'Motel Parking',
         Icon = 'fas fa-map-marker-alt',
