@@ -198,23 +198,23 @@ ServerConfig.CurrentFishSpot = vector3(241.00, 3993.00, 30.40)
 ServerConfig.FishSellItems = {
     ['fish-blue'] = {
         ['Type'] = 'Money',
-        ['Amount'] = math.random(40, 60),
+        ['Amount'] = math.random(60, 100),
     },
     ['fish-bass'] = {
         ['Type'] = 'Money',
-        ['Amount'] = math.random(60, 80),
+        ['Amount'] = math.random(80, 120),
     },
     ['fish-cod'] = {
         ['Type'] = 'Money',
-        ['Amount'] = math.random(80, 100),
+        ['Amount'] = math.random(100, 140),
     },
     ['fish-flounder'] = {
         ['Type'] = 'Money',
-        ['Amount'] = math.random(60, 80),
+        ['Amount'] = math.random(80, 120),
     },
     ['fish-mackerel'] = {
         ['Type'] = 'Money',
-        ['Amount'] = math.random(10, 15),
+        ['Amount'] = math.random(40, 60),
     },
     
 }
