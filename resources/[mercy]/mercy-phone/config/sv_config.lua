@@ -175,7 +175,7 @@ ServerConfig.DarkItems = {
         Name = 'darkmarketdeliveries',
         Label = 'Phone Dongle',
         Payment = {
-            Amount = 50,
+            Amount = 20,
             Label = 'Guinea'
         },
         DropOffs = {

@@ -2179,6 +2179,21 @@ Shared.ItemList["advlockpick"] = {
 	}
 }
 
+Shared.ItemList["phonedongle"] = {
+	['ItemName'] = "phonedongle",
+	['Label'] = "Phone Dongle",
+	['Weight'] = 0.15,
+	['Type'] = "Item",
+	['Metal'] = false,
+	['Image'] = "np_heist_usb_gold.png",
+	['Unique'] = false,
+	['Combinable'] = nil,
+	['Description'] = "Birds private photos",
+	['DecayRate'] = 0.1,
+	['RemoveWhenDecayed'] = true,
+	['Price'] = 1,
+}
+
 Shared.ItemList["heist-usb-green"] = {
 	['ItemName'] = "heist-usb-green",
 	['Label'] = "Green USB",
