@@ -38,7 +38,7 @@ end)
 
 RegisterNetEvent('mercy-vehicles/client/on-veh-lockpick', function(Vehicle, Plate)
     if not exports['mercy-phone']:IsJobCenterTaskActive('oxy', 1) then return end
-    if GetEntityModel(Vehicle) ~= GetHashKey("sandler") then return end
+    if GetEntityModel(Vehicle) ~= GetHashKey("sadler") then return end
 
     TriggerEvent('mercy-phone/client/jobcenter/request-task-success', 1, true)
     Jobs.Oxy.TransportVehicle = Vehicle
