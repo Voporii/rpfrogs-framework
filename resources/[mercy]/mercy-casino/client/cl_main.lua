@@ -130,7 +130,7 @@ RegisterNetEvent("mercy-casino/client/casino-action", function(Data)
                 Payment = Payment + (300 * 5) -- $1500, / $300 per
             end
         end
-        EventsModule.TriggerServer("mercy-casino/server/buy-chips", Payment)
+        EventsModule.TriggerServer("mercy-casino/server/buy-chips", Payment
     elseif Type == 'CashWithdraw' then
         if Timeout then return exports['mercy-ui']:Notify("casino-withdraw", "You are already withdrawing, please wait..", "error") end
         if not Timeout then
