@@ -75,7 +75,7 @@ Config.Tasks = {
         Tasks = {
             {
                 TaskId = 1,
-                Text = 'Find and steal a Bison to use as transport.',
+                Text = 'Find and steal a Sadler to use as transport.',
                 Finished = false,
             },
             {
