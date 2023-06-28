@@ -37,6 +37,16 @@ Citizen.CreateThread(function()
     end
 end)
 
+RegisterCommand('e c', function(source, args, RawCommand)
+    if LocalPlayer.state.LoggedIn and PlayingAnim then
+        if IsControlJustReleased(0, 73) then
+            TriggerEvent('mercy-animations/client/clear-animation')
+        end
+    else
+        Citizen.Wait(450)
+    end
+end)
+
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(4)
