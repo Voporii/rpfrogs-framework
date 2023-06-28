@@ -204,7 +204,7 @@ Citizen.CreateThread(function()
     EventsModule.RegisterServer('mercy-casino/server/buy-chips', function(Source, Amount, Dirty)
         local Player = PlayerModule.GetPlayerBySource(Source)
         if not Player then return end
-    if Dirty then
+    if Dirty and Amount > 0 then
         Player.Functions.Notify("buy-casino-chips", "You bought $"..Amount.." in chips with the stuff you had..", "success")
         Player.Functions.AddMoney("Casino", Amount, "buy-casino-chips")
     else
@@ -214,6 +214,7 @@ Citizen.CreateThread(function()
         else
             Player.Functions.Notify("buy-casino-chips", "Not enough cash..", "error")
         end
+        Player.Functions.Notify("buy-casino-chips", "Nothing to trade in..", "error")
     end
     end)
 
