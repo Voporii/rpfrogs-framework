@@ -270,7 +270,7 @@ RegisterNetEvent("mercy-business/client/hayes/mount-misc", function(Data)
 end)
 
 RegisterNetEvent("mercy-business/client/hayes/stash", function(Data)
-    if not exports['mercy-business']:HasPlayerBusinessPermission(Data.Business, 'stash_access') then
+    if not exports['mercy-business']:HasPlayerBusinessPermission('Hayes Repairs', 'stash_access') then
         return exports['mercy-ui']:Notify("hayes-error", "No access..", "error")
     end
 
@@ -280,7 +280,7 @@ RegisterNetEvent("mercy-business/client/hayes/stash", function(Data)
 end)
 
 RegisterNetEvent("mercy-business/client/hayes/craft", function(Data)
-    if not exports['mercy-business']:HasPlayerBusinessPermission(Data.Business, 'craft_access') then
+    if not exports['mercy-business']:HasPlayerBusinessPermission('Hayes Repairs', 'craft_access') then
         return exports['mercy-ui']:Notify("hayes-error", "No access..", "error")
     end
 
