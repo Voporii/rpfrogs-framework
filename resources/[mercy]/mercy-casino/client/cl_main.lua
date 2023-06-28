@@ -111,7 +111,7 @@ RegisterNetEvent("mercy-casino/client/casino-action", function(Data)
             EventsModule.TriggerServer("mercy-casino/server/buy-chips", ChipsInput['chips-amount'])
         end
     elseif Type == 'BuyDirty' then
-        local Payment = math.random(10, 110)
+        local Payment = 0
         if exports["mercy-inventory"]:HasEnoughOfItem("markedbills", 20) then
             local DidRemove = CallbackModule.SendCallback('mercy-base/server/remove-item', 'markedbills', 20, false, true)
             if DidRemove then
