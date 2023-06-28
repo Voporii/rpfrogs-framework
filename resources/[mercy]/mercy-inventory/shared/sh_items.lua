@@ -4987,3 +4987,43 @@ Shared.ItemList["spray-angels"] = {
 		{ Item = 'aluminum', Amount = 100 },
 	}
 }
+
+
+Shared.ItemList["spray-cg"] = {
+	['ItemName'] = "spray-cg",
+	['Label'] = "CG Spray",
+	['Weight'] = 1.0,
+	['Type'] = "Item",
+	['Metal'] = false,
+	['Image'] = "m_spraycan.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "Art.",
+	['DecayRate'] = 0.066,
+	['RemoveWhenDecayed'] = true,
+	['Price'] = 500,
+	['Cost'] = {
+		{ Item = 'plastic', Amount = 50 },
+		{ Item = 'aluminum', Amount = 100 },
+	}
+}
+
+
+Shared.ItemList["gg-angels"] = {
+	['ItemName'] = "gg-angels",
+	['Label'] = "GG Spray",
+	['Weight'] = 1.0,
+	['Type'] = "Item",
+	['Metal'] = false,
+	['Image'] = "m_spraycan.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "Art.",
+	['DecayRate'] = 0.066,
+	['RemoveWhenDecayed'] = true,
+	['Price'] = 500,
+	['Cost'] = {
+		{ Item = 'plastic', Amount = 50 },
+		{ Item = 'aluminum', Amount = 100 },
+	}
+}
