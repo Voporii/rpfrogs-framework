@@ -51,14 +51,24 @@ Citizen.CreateThread(function()
 
     -- Wheel
 
+   
+    -- [ Functions ] --
+    
+
     EventsModule.RegisterServer("mc-wheel/server/give-reward", function(Source, Slot)
         local Player = PlayerModule.GetPlayerBySource(Source)
         if not Player then return end
         local SlotData = GetSlotData(Slot)
+        local payout = tonumber(SlotData['Amount'])
         if SlotData['Type'] == 'Money' then
             if tonumber(SlotData['Amount']) > 0 then
                 Player.Functions.AddMoney("Casino", tonumber(SlotData['Amount']), "slots-payout")
                 Player.Functions.Notify("wheel-won", 'Congrats, you received $'..SlotData['Amount']..' in chips!', "success")
+                DatabaseModule.Update('INSERT INTO wheel_logs (user, amount, date) VALUES(?, ?, ?)', {
+                    Player.PlayerData.CitizenId, 
+                    payout, 
+                    os.date(),
+                })
             end
         elseif SlotData['Type'] == 'Vehicle' then
             Player.Functions.Notify("wheel-won-car", 'Congrats, you won the car!', "success")
