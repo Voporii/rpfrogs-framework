@@ -479,6 +479,7 @@ PlayerModule = {
                 self.Functions.UpdatePlayerData()
                 if Type == 'Cash' then
                     TriggerClientEvent("mercy-ui/client/money-change", self.PlayerData.Source, 'Remove', Amount, self.PlayerData.Money[Type])
+                    TriggerEvent('mercy-financials/server/sync-main-bank', self.PlayerData.Source, self.PlayerData.Money['Bank'])
                 else
                     TriggerEvent('mercy-financials/server/sync-main-bank', self.PlayerData.Source, self.PlayerData.Money['Bank'])
                 end
@@ -496,6 +497,7 @@ PlayerModule = {
                 self.Functions.UpdatePlayerData()
                 if Type == 'Cash' then
                     TriggerClientEvent("mercy-ui/client/money-change", self.PlayerData.Source, 'Add', Amount, self.PlayerData.Money[Type])
+                    TriggerEvent('mercy-financials/server/sync-main-bank', self.PlayerData.Source, self.PlayerData.Money['Bank'])
                 else
                     TriggerEvent('mercy-financials/server/sync-main-bank', self.PlayerData.Source, self.PlayerData.Money['Bank'])
                 end
