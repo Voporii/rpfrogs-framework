@@ -185,9 +185,9 @@ function CreateMeal(Data)
             StopAnimTask(PlayerPedId(), "anim@amb@business@coc@coc_unpack_cut@", "fullcut_cycle_v6_cokecutter", 1.0)
             EventsModule.TriggerServer('mercy-business/server/foodchain/create-meal', Data.Item)
             Data.Skip = true
-            Citizen.SetTimeout(100, function()
-                TriggerEvent('mercy-business/client/foodchain/create-meal', Data)
-            end)
+            --Citizen.SetTimeout(100, function()
+            --    TriggerEvent('mercy-business/client/foodchain/create-meal', Data)
+            --end)
         else
             exports['mercy-inventory']:SetBusyState(false)
             StopAnimTask(PlayerPedId(), "anim@amb@business@coc@coc_unpack_cut@", "fullcut_cycle_v6_cokecutter", 1.0)

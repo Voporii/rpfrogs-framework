@@ -5009,9 +5009,47 @@ Shared.ItemList["spray-cg"] = {
 }
 
 
-Shared.ItemList["gg-angels"] = {
-	['ItemName'] = "gg-angels",
+Shared.ItemList["spray-gg"] = {
+	['ItemName'] = "spray-gg",
 	['Label'] = "GG Spray",
+	['Weight'] = 1.0,
+	['Type'] = "Item",
+	['Metal'] = false,
+	['Image'] = "m_spraycan.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "Art.",
+	['DecayRate'] = 0.066,
+	['RemoveWhenDecayed'] = true,
+	['Price'] = 500,
+	['Cost'] = {
+		{ Item = 'plastic', Amount = 50 },
+		{ Item = 'aluminum', Amount = 100 },
+	}
+}
+
+Shared.ItemList["spray-vagos"] = {
+	['ItemName'] = "spray-vagos",
+	['Label'] = "Vagos Spray",
+	['Weight'] = 1.0,
+	['Type'] = "Item",
+	['Metal'] = false,
+	['Image'] = "m_spraycan.png",
+	['Unique'] = true,
+	['Combinable'] = nil,
+	['Description'] = "Art.",
+	['DecayRate'] = 0.066,
+	['RemoveWhenDecayed'] = true,
+	['Price'] = 500,
+	['Cost'] = {
+		{ Item = 'plastic', Amount = 50 },
+		{ Item = 'aluminum', Amount = 100 },
+	}
+}
+
+Shared.ItemList["spray-cerb"] = {
+	['ItemName'] = "spray-cerb",
+	['Label'] = "Cerberus Spray",
 	['Weight'] = 1.0,
 	['Type'] = "Item",
 	['Metal'] = false,

@@ -978,6 +978,20 @@ Citizen.CreateThread(function()
         end
     end)
 
+    FunctionsModule.CreateUseableItem("spray-cerb", function(Source, Item)
+        local Player = PlayerModule.GetPlayerBySource(Source)
+        if Player.Functions.GetItemBySlot(Item.Slot) ~= nil then
+            TriggerClientEvent('mercy-misc/client/used-spay-can', Source, 'spray-cerb', 'np_sprays_cerberus')
+        end
+    end)
+
+    FunctionsModule.CreateUseableItem("spray-vagos", function(Source, Item)
+        local Player = PlayerModule.GetPlayerBySource(Source)
+        if Player.Functions.GetItemBySlot(Item.Slot) ~= nil then
+            TriggerClientEvent('mercy-misc/client/used-spay-can', Source, 'spray-vagos', 'np_sprays_vagos')
+        end
+    end)
+
    
     
     -- Chains
