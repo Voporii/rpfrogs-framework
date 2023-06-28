@@ -388,11 +388,11 @@ RegisterNetEvent("mercy-vehicles/server/depot-vehicle", function(NetId, ImpoundI
                 Reason = InputResult ~= nil and InputResult['Reason'] or "Not provided.",
                 Fee = InputResult ~= nil and InputResult['Fee'] or 200,
                 Strikes = InputResult ~= nil and InputResult['Strikes'] or 1,
-                RetainedUntil = InputResult ~= nil and os.time() + (InputResult["RetainedUntil"]*450) or os.time() + 1800, -- 30 Mins
+                RetainedUntil = InputResult ~= nil and os.time() + (InputResult["RetainedUntil"]*900) or os.time() + 3600, -- 1 Hour
                 ImpoundDate = os.date("%d/%m/%Y %H:%M", os.time()),
                 Plate = Plate,
                 Issuer = Player.PlayerData.CharInfo.Firstname.." "..Player.PlayerData.CharInfo.Lastname,
-                ReleaseTxt = os.date("%d/%m/%Y %H:%M", InputResult ~= nil and (os.time() + (InputResult["RetainedUntil"] * 450)) or (os.time() + 1800)), -- 30 Mins
+                ReleaseTxt = os.date("%d/%m/%Y %H:%M", InputResult ~= nil and (os.time() + (InputResult["RetainedUntil"] * 900)) or (os.time() + 3600)), -- 1 Hour
                 Vehicle = GetEntityModel(Vehicle),
                 VIN = VehData[1].vin,
             }
