@@ -196,6 +196,7 @@ Citizen.CreateThread(function()
         if not Player then return end
     if Dirty then
         Player.Functions.Notify("buy-casino-chips", "You bought $"..Amount.." in chips with the stuff you had..", "success")
+        Player.Functions.AddMoney("Casino", Amount, "buy-casino-chips")
     else
         if Player.Functions.RemoveMoney("Cash", Amount, "buy-casino-chips") then
             Player.Functions.AddMoney("Casino", Amount, "buy-casino-chips")
