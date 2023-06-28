@@ -116,18 +116,24 @@ RegisterNetEvent("mercy-casino/client/casino-action", function(Data)
             local DidRemove = CallbackModule.SendCallback('mercy-base/server/remove-item', 'markedbills', 20, false, true)
             if DidRemove then
                 Payment = Payment + (250 * 20) -- $5k / $250 per
+            else
+                exports['mercy-ui']:Notify("casino", "You dont have anything to trade in..", "error")
             end
         end
         if exports["mercy-inventory"]:HasEnoughOfItem("cash-rolls", 5, false, true) then
             local DidRemove = CallbackModule.SendCallback('mercy-base/server/remove-item', 'cash-rolls', 5, false, true)
             if DidRemove then
                 Payment = Payment + (30 * 5) -- $150 / $30 per
+            else
+                exports['mercy-ui']:Notify("casino", "You dont have anything to trade in..", "error")
             end
         end
         if exports["mercy-inventory"]:HasEnoughOfItem("cash-bands", 5, false, true) then
             local DidRemove = CallbackModule.SendCallback('mercy-base/server/remove-item', 'cash-bands', 5, false, true)
             if DidRemove then
                 Payment = Payment + (300 * 5) -- $1500, / $300 per
+            else
+                exports['mercy-ui']:Notify("casino", "You dont have anything to trade in..", "error")
             end
         end
         EventsModule.TriggerServer("mercy-casino/server/buy-chips", Payment, true)
