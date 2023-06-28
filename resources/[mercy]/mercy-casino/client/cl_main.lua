@@ -187,6 +187,9 @@ function SetupCasinoPeds()
 end
 
 function HasCasinoMembership()
+    local PlayerData = PlayerModule.GetPlayerData()
+    local CardData = CallbackModule.SendCallback('mercy-base/server/get-membership')
+    if not CardData then return false end
     return true
 end
 
