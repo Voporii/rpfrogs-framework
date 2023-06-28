@@ -27,4 +27,8 @@ Citizen.CreateThread(function()
     CommandsModule.Add("e", "Play an animation.", {{Name="Animation", Help="Animation"}}, false, function(source, args)
         TriggerClientEvent('mercy-animations/client/play-animation', source, args[1])
     end)
+
+    CommandsModule.Add("e c", "Cancel the current animation.", {{Name="Animation", Help="Animation"}}, false, function(source, args)
+        TriggerClientEvent('mercy-animations/client/clear-animation', source)
+    end)
 end)
