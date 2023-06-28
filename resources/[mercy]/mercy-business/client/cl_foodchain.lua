@@ -23,9 +23,9 @@ end)
 -- Give tickets every 5 min
 Citizen.CreateThread(function()
     while true do
-        if LocalPlayer.state.LoggedIn and ClockedData.Business == 'Burger Shot' and ClockedData.Clocked then
+        if LocalPlayer.state.LoggedIn and ClockedData.Business == 'Burger Shot' or ClockedData.Business == 'UwU Café' and ClockedData.Clocked then
             Citizen.Wait((1000 * 60) * 5) -- 5 min
-            if ClockedData.Business == 'Burger Shot' and ClockedData.Clocked then -- Or Pizza This or UwU,..
+            if ClockedData.Business == 'Burger Shot' or ClockedData.Business == 'UwU Café' and ClockedData.Clocked then 
                 EventsModule.TriggerServer('mercy-inventory/server/add-item', 'receipt', 1, false, {Business = ClockedData.Business, Money = math.random(150, 250), Comment = 'Paycheck'}, true)
             end
         else
