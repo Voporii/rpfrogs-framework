@@ -353,7 +353,7 @@ RegisterNUICallback('PurchaseUpgrade', function(Data, Cb)
         SetVehicleHandbrake(Vehicle, false)
 
         if not IsAdmin then
-                if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs')
+                if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs') then
                     EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs))
                 else
                     exports['mercy-ui']:Notify("bennys-error", "Your employee discount has been applied!", "success")
@@ -396,7 +396,7 @@ RegisterNUICallback('PurchaseUpgrade', function(Data, Cb)
         end
 
         if type(Button.Data.Costs) == 'number' and tonumber(Button.Data.Costs) > 0 and not IsAdmin then
-            if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs')
+            if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs') then
             EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs))
         else
             exports['mercy-ui']:Notify("bennys-error", "Your employee discount has been applied!", "success")
