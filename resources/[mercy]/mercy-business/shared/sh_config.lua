@@ -424,7 +424,50 @@ Config.HayesCrafting = {
         ['Amount'] = 100,
         ['Info'] = '',
     },
+    {
+        ['ItemName'] = 'generic-mechanic-part-a',
+        ['Slot'] = 46,
+        ['Amount'] = 100,
+        ['Info'] = '',
+    },
+    {
+        ['ItemName'] = 'generic-mechanic-part-b',
+        ['Slot'] = 47,
+        ['Amount'] = 100,
+        ['Info'] = '',
+    },
+    {
+        ['ItemName'] = 'generic-mechanic-part-c',
+        ['Slot'] = 48,
+        ['Amount'] = 100,
+        ['Info'] = '',
+    },
+    {
+        ['ItemName'] = 'generic-mechanic-part-d',
+        ['Slot'] = 49,
+        ['Amount'] = 100,
+        ['Info'] = '',
+    },
+    {
+        ['ItemName'] = 'generic-mechanic-part-e',
+        ['Slot'] = 50,
+        ['Amount'] = 100,
+        ['Info'] = '',
+    },
+    {
+        ['ItemName'] = 'generic-mechanic-part-m',
+        ['Slot'] = 51,
+        ['Amount'] = 100,
+        ['Info'] = '',
+    },
+    {
+        ['ItemName'] = 'generic-mechanic-part-s',
+        ['Slot'] = 52,
+        ['Amount'] = 100,
+        ['Info'] = '',
+    },
 }
+
 
 Config.HayesZones = {
     {
