@@ -26,16 +26,16 @@ Config.Zones = {
 
     -- Hayes
     {
-        center = vector3(281.62, -1809.68, 26.91),
+        center = vector3(vector3(-1423.74, -450.14, 35.91)),
         length = 5.2,
         width = 6.0,
         heading = 50,
-        minZ = 25.91,
-        maxZ = 28.71,
+        minZ = 34.91,
+        maxZ = 36.71,
         ShowBlip = false,
         data = {
             Authorized = { Business = { "Hayes Repairs" } },
-            Heading = 139.47,
+            Heading = 115.26,
         },
     },
 
