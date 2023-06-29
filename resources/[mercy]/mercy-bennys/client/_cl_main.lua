@@ -363,7 +363,6 @@ RegisterNUICallback('PurchaseUpgrade', function(Data, Cb)
             VehicleModule.RepairVehicle(Vehicle)
             Menu.RemoveMenu("Repair")
             if InBennys then BuildMenu(Vehicle) end
-        end
     else
         if Button.Id == "Wheels" and (VehicleMods['Wheels'] == Button.Data.WheelType and VehicleMods['ModFrontWheels'] == Button.Data.ModIndex) then
             return exports['mercy-ui']:Notify("bennys-error", "Mod is already installed..", "error")
