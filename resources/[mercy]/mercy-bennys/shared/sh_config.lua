@@ -49,7 +49,7 @@ Config.Zones = {
         maxZ = 10.04,
         ShowBlip = false,
         data = {
-            --Authorized = { Business = { "6STR. Tuner Shop" } },
+            Authorized = { Business = { "6STR. Tuner Shop" } },
             Heading = 270.53,
         },
     },
