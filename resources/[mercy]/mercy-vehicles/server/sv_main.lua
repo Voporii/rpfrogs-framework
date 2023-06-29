@@ -362,18 +362,18 @@ RegisterNetEvent("mercy-vehicles/server/set-veh-state", function(Plate, State, N
     }, function(Result)
         if Result[1] == nil then return end
         local ImpoundData = {
-            Reason = "Illegal parking.",
-            Fee = 200,
+            Reason = "Illegal Parking.",
+            Fee = 50,
             Strikes = 0,
             RetainedUntil = os.time(),
             ImpoundDate = os.date("%d/%m/%Y %H:%M", os.time()),
             Plate = Plate,
             Issuer = "LSPD",
-            ReleaseTxt = os.date("%d/%m/%Y %H:%M", os.time()), -- 4 hours default
+            ReleaseTxt = os.date("%d/%m/%Y %H:%M", os.time()), 
             Vehicle = GetEntityModel(Veh),
             VIN = Result[1].vin,
         }
-        DatabaseModule.Update("UPDATE player_vehicles SET garage = ?, state = ?, impounddata = ? WHERE plate = ?", {'apartment_1', 'In', '', Plate})
+        DatabaseModule.Update("UPDATE player_vehicles SET garage = ?, state = ?, impounddata = ? WHERE plate = ?", {'depot', State, json.encode(ImpoundData), Plate})
     end)
 
 end)
