@@ -1462,8 +1462,8 @@ Config.Doors = {
     -- Hayes
     {
         Info = 'HAYES_GARAGE_DOOR_01',
-        Coords = vector3(262.53, -1821.2, 26.91),
-        Model = -1831381864,
+        Coords = vector3(-1414.869, -436.3675, 34.90352),
+        Model = `denis3d_hayes_auto_shuttergate`,
         Locked = 1,
         IsGate = true,
         CanDetcord = true,
