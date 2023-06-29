@@ -32,7 +32,7 @@ Citizen.CreateThread(function()
             local Plate = GeneratePlate()
             local VehicleMeta = {Fuel = 100.0, Body = 1000.0, Engine = 1000.0}
             local VinNumber = GenerateVIN()
-            DatabaseModule.Insert("INSERT INTO player_vehicles (citizenid, vehicle, plate, garage, state, mods, metadata, vin, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", {Player.PlayerData.CitizenId, BikeData['Vehicle'], Plate, 'depot', 'Out', '{}', json.encode(VehicleMeta), VinNumber, 'Player'})
+            DatabaseModule.Insert("INSERT INTO player_vehicles (citizenid, vehicle, plate, garage, state, mods, metadata, vin, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", {Player.PlayerData.CitizenId, BikeData['Vehicle'], Plate, 'apartment_1', 'In', '{}', json.encode(VehicleMeta), VinNumber, 'Player'})
             TriggerClientEvent('mercy-pdm/client/bought-bicycle', Source, BikeData['Vehicle'], Plate)
             Player.Functions.Notify('bought-bike', 'You successfully bought a '..BikeData['Name'], 'success')
         else
@@ -52,8 +52,8 @@ Citizen.CreateThread(function()
                     Player.PlayerData.CitizenId, 
                     VehicleData['Vehicle'], 
                     Plate, 
-                    'depot', 
-                    'Out', 
+                    'apartment_1', 
+                    'In', 
                     '{}', 
                     json.encode(VehicleMeta), 
                     VinNumber, 
