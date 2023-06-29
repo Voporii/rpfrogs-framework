@@ -356,7 +356,7 @@ RegisterNUICallback('PurchaseUpgrade', function(Data, Cb)
                 if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs')
                     EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs))
                 else
-                    exports['mercy-ui']:Notify("bennys-error", "Your employee discound has been applied!", "success")
+                    exports['mercy-ui']:Notify("bennys-error", "Your employee discount has been applied!", "success")
                 end
             end
             TriggerEvent('mercy-ui/client/play-sound', 'bennys-wrench', 0.4)
@@ -399,7 +399,7 @@ RegisterNUICallback('PurchaseUpgrade', function(Data, Cb)
             if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs')
             EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs))
         else
-            exports['mercy-ui']:Notify("bennys-error", "Your employee discound has been applied!", "success")
+            exports['mercy-ui']:Notify("bennys-error", "Your employee discount has been applied!", "success")
         end 
         end
 
