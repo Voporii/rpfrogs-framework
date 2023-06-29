@@ -135,7 +135,7 @@ RegisterNetEvent('mercy-police/client/badge-anim', function()
 end)
 
 RegisterNetEvent('mercy-police/client/send-911', function(Data, IsAnonymously)
-    if PlayerModule.GetPlayerData().Job ~= nil and (PlayerModule.GetPlayerData().Job.Name == 'police' or PlayerModule.GetPlayerData().Job.Name == 'ems') and PlayerModule.GetPlayerData().Job.Duty then
+    if PlayerModule.GetPlayerData().Job ~= nil and (PlayerModule.GetPlayerData().Job.Name == 'police' or PlayerModule.GetPlayerData().Job.Name == 'ems') then
         if IsAnonymously then
 			TriggerEvent('mercy-chat/client/post-message', "911 | Anonymous", Data['Message'], 'error')
         else
@@ -146,7 +146,7 @@ RegisterNetEvent('mercy-police/client/send-911', function(Data, IsAnonymously)
 end)
 
 RegisterNetEvent('mercy-police/client/send-reaction-to-dispatch', function(Data)
-    if PlayerModule.GetPlayerData().Job ~= nil and (PlayerModule.GetPlayerData().Job.Name == 'police' or PlayerModule.GetPlayerData().Job.Name == 'ems') and PlayerModule.GetPlayerData().Job.Duty then
+    if PlayerModule.GetPlayerData().Job ~= nil and (PlayerModule.GetPlayerData().Job.Name == 'police' or PlayerModule.GetPlayerData().Job.Name == 'ems') then
         TriggerEvent('mercy-chat/client/post-message', "911r -> ("..Data['Id']..') '..Data['Who'], Data['Message'], "error")
     end
 end)
