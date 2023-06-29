@@ -373,7 +373,7 @@ RegisterNetEvent("mercy-vehicles/server/set-veh-state", function(Plate, State, N
             Vehicle = GetEntityModel(Veh),
             VIN = Result[1].vin,
         }
-        DatabaseModule.Update("UPDATE player_vehicles SET garage = ?, state = ?, impounddata = ? WHERE plate = ?", {'depot', State, json.encode(ImpoundData), Plate})
+        DatabaseModule.Update("UPDATE player_vehicles SET garage = ?, state = ?, impounddata = ? WHERE plate = ?", {'apartment_1', 'In', '', Plate})
     end)
 
 end)
