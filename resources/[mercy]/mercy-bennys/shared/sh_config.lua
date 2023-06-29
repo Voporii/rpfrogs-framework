@@ -35,7 +35,7 @@ Config.Zones = {
         ShowBlip = false,
         data = {
             Authorized = { Business = { "Hayes Repairs" } },
-            Heading = 115.26,
+            Heading = 32.62,
         },
     },
 
@@ -49,7 +49,7 @@ Config.Zones = {
         maxZ = 10.04,
         ShowBlip = false,
         data = {
-            Authorized = { Business = { "6STR. Tuner Shop" } },
+            --Authorized = { Business = { "6STR. Tuner Shop" } },
             Heading = 270.53,
         },
     },
