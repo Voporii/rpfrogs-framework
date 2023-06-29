@@ -106,8 +106,8 @@ Citizen.CreateThread(function()
         TriggerClientEvent('mercy-ui/client/notify', Source, "gopro-placed", "You placed a GoPro ("..CustomId..")", 'success')
     end)
     
-    EventsModule.RegisterServer('mercy-misc/server/send-me', function(Source, Text)
-        TriggerClientEvent('mercy-misc/client/me', -1, Source, Text)
+    EventsModule.RegisterServer('mercy-misc/server/send-me', function(source, Text)
+        TriggerClientEvent('mercy-misc/client/me', -1, source, Text)
     end)
     
     EventsModule.RegisterServer('mercy-misc/server/goldpanning/get-loot', function(Source, Multiplier)

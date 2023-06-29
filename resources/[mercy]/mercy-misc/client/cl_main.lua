@@ -94,13 +94,13 @@ RegisterNetEvent('mercy-misc/client/used-dice', function()
 end)
 
 local MessagesCount = 0
-RegisterNetEvent('mercy-misc/client/me', function(Source, Text)
+RegisterNetEvent('mercy-misc/client/me', function(source, Text)
     local Alpha = 600
     MessagesCount = MessagesCount + 1
     local MessageCount = MessagesCount + 0.1
     local Distance = 0.1
     
-    local Ped = GetPlayerPed(GetPlayerFromServerId(Source))
+    local Ped = GetPlayerPed(GetPlayerFromServerId(source))
 
     while Alpha > 0 do
         Alpha = Alpha - 1
