@@ -353,7 +353,12 @@ RegisterNUICallback('PurchaseUpgrade', function(Data, Cb)
         SetVehicleHandbrake(Vehicle, false)
 
         if not IsAdmin then
-            EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs))
+                if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs')
+                    EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs))
+                else
+                    exports['mercy-ui']:Notify("bennys-error", "Your employee discound has been applied!", "success")
+                end
+            end
             TriggerEvent('mercy-ui/client/play-sound', 'bennys-wrench', 0.4)
             VehicleModule.RepairVehicle(Vehicle)
             Menu.RemoveMenu("Repair")
@@ -391,7 +396,11 @@ RegisterNUICallback('PurchaseUpgrade', function(Data, Cb)
         end
 
         if type(Button.Data.Costs) == 'number' and tonumber(Button.Data.Costs) > 0 and not IsAdmin then
-            EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs)) 
+            if not exports['mercy-business']:IsPlayerInBusiness('Hayes Repairs')
+            EventsModule.TriggerServer('mercy-base/server/remove-money', tonumber(Button.Data.Costs))
+        else
+            exports['mercy-ui']:Notify("bennys-error", "Your employee discound has been applied!", "success")
+        end 
         end
 
         if Data.Menu == 'ResprayMetallic' or Data.Menu == 'ResprayMetal' or Data.Menu == 'ResprayMatte' then
